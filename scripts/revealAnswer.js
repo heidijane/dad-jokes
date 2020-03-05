@@ -14,7 +14,6 @@ const reveal = () => {
                 jokeElement.classList.remove('paused');
                 jokeElement.classList.toggle('hidden');
                 jokeElement.classList.toggle('visible');
-                console.log(jokeElement.classList);
             }
         )
     }
