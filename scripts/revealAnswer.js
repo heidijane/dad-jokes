@@ -11,7 +11,10 @@ const reveal = () => {
                 let jokeElement = document.querySelector(`#${joke.id} div`);
 
                 //toggle the "hidden" class to show/hide when the joke is clicked
+                jokeElement.classList.remove('paused');
                 jokeElement.classList.toggle('hidden');
+                jokeElement.classList.toggle('visible');
+                console.log(jokeElement.classList);
             }
         )
     }

@@ -18,27 +18,66 @@
 
 }
 .joke__answer {}
-.hidden {
+
+/* Pause the animation so it doesn't play on page load */
+.paused {
     visibility: hidden;
+}
+.visible {
+    visibility: visible;
+    opacity: 1;
+    animation-name: fadeIn;
+    animation-duration: 150ms;
+}
+.hidden {
+    animation-fill-mode: forwards;
+    animation-name: fadeOut;
+    animation-duration: 150ms;
 }
 @keyframes wiggle {
     0% {
-        transform: rotate(2deg);
+        transform: rotate(1deg);
     }
     
     25% {
-        transform: rotate(-2deg);
+        transform: rotate(-1deg);
     }
     
     50% {
-        transform: rotate(4deg);
+        transform: rotate(2deg);
     }
     
     75% {
-        transform: rotate(-2deg);
+        transform: rotate(-1deg);
     }
     
     100% {
         transform: rotate(0deg);
+    }
+}
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    
+    50% {
+        opacity: .5;
+    }
+    
+    100% {
+        opacity: 1;
+    }
+}
+@keyframes fadeOut {
+    0% {
+        opacity: 1;
+    }
+    
+    50% {
+        opacity: .5;
+    }
+    
+    100% {
+        opacity: 0;
     }
 }
