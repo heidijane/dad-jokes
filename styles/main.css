@@ -1,0 +1,11 @@
+@import url("./joke.css");
+body {
+    background-color: #d6d5b8;
+    color: #4b4839;
+}
+
+.jokes {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+}
